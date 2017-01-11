@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'UHWform.urls'
+ROOT_URLCONF = 'DialysisCalc.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'UHWform.wsgi.application'
+WSGI_APPLICATION = 'DialysisCalc.wsgi.application'
 
 
 # Database
