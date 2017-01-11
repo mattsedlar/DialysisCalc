@@ -1,5 +1,5 @@
 body {
- background-color: blue;
+ background-color: #36577f;
  color: #fff;
 }
 
@@ -12,4 +12,10 @@ body {
 .vertical-center-row {
     display: table-cell;
     vertical-align: middle;
+}
+
+/* SEGMENTATION */
+
+#step1, #step2, #step3, #step4, #step5 {
+  display: none;
 }
