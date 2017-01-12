@@ -3,7 +3,8 @@ from __future__ import unicode_literals
 from django.db import models
 
 # Create your models here.
-class User(models.Model):
+class Response(models.Model):
+  rid = models.IntegerField()
   position = models.CharField(max_length=100)
   facility = models.CharField(max_length=100)
   location = models.CharField(max_length=100)
@@ -11,6 +12,12 @@ class User(models.Model):
   breaks = models.IntegerField()
   sick = models.IntegerField()
   closing = models.IntegerField()
+  
+  def __str__(self):
+    return self.name
+    
+class User(models.Model):
+  uid = models.IntegerField()
   name = models.CharField(max_length=100)
   email = models.CharField(max_length=100)
   
