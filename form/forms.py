@@ -6,8 +6,13 @@ class ResponseForm(forms.Form):
   	('Patient Care Technician','Patient Care Technician'),
   	('Registered Nurse','Registered Nurse')
   	)
-  position = forms.MultipleChoiceField(widget=forms.CheckboxSelectMultiple, choices=POS_OPTIONS)
-  facility = forms.CharField(max_length=100)
+  FAC_OPTIONS = (
+    ('DaVita','DaVita'),
+    ('Fresenius Medical Care', 'Fresenius Medical Care'),
+    ('Other Facility','Other Facility')
+    )
+  position = forms.ChoiceField(widget=forms.Select, choices=POS_OPTIONS, label="I am a ")
+  facility = forms.ChoiceField(widget=forms.Select, choices=FAC_OPTIONS, label="and I work at ")
   location = forms.CharField(max_length=100)
 #  opening = forms.IntegerField()
 #  breaks = forms.IntegerField()

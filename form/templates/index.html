@@ -5,7 +5,7 @@
     		    <!-- POSITION AND FACILITY -->
         		<div class="text-center col-md-12">
 
-              <form action="post_response/" method="post">
+              <form action="post_response/" class="form-inline" method="post">
                 {% csrf_token %}
                 {{ form }}
               <input type="submit" value="Submit"/>

@@ -4,19 +4,19 @@ from django.db import models
 
 # Create your models here.
 class Response(models.Model):
-  rid = models.IntegerField()
+  #rid = models.IntegerField()
   position = models.CharField(max_length=100)
   facility = models.CharField(max_length=100)
   location = models.CharField(max_length=100)
-  opening = models.IntegerField()
-  breaks = models.IntegerField()
-  sick = models.IntegerField()
-  closing = models.IntegerField()
+  #opening = models.IntegerField()
+  #breaks = models.IntegerField()
+  #sick = models.IntegerField()
+  #closing = models.IntegerField()
   
   def __str__(self):
-    return self.name
+    return self.facility
     
-class User(models.Model):
+class Contact(models.Model):
   uid = models.IntegerField()
   name = models.CharField(max_length=100)
   email = models.CharField(max_length=100)
