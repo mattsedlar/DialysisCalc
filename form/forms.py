@@ -14,6 +14,7 @@ class ResponseForm(forms.Form):
   position = forms.ChoiceField(widget=forms.Select, choices=POS_OPTIONS, label="I am a ")
   facility = forms.ChoiceField(widget=forms.Select, choices=FAC_OPTIONS, label="and I work at ")
   location = forms.CharField(max_length=100)
+  rid = forms.IntegerField()
 #  opening = forms.IntegerField()
 #  breaks = forms.IntegerField()
 #  sick = forms.IntegerField()

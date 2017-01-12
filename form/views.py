@@ -5,12 +5,15 @@ from .forms import ResponseForm
 
 # Create your views here.
 def index(request):
-  return render(request, 'index.html')
+  last_rid = Response.objects.last()
+  last_rid = last_rid.rid + 1
+  return render(request, 'index.html', {'last_rid':last_rid})
 
 def post_response(request):
 	form = ResponseForm(request.POST)
 	if form.is_valid():
-		r = Response(position = form.cleaned_data['position'],
+		r = Response(rid = form.cleaned_data['rid'],
+		  position = form.cleaned_data['position'],
 			facility = form.cleaned_data['facility'],
 			location = form.cleaned_data['location'])
 		r.save()
