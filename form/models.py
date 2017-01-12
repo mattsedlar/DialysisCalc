@@ -8,10 +8,10 @@ class Response(models.Model):
   position = models.CharField(max_length=100)
   facility = models.CharField(max_length=100)
   location = models.CharField(max_length=100)
-  # opening = models.IntegerField()
-  # breaks = models.IntegerField()
-  # sick = models.IntegerField()
-  # closing = models.IntegerField()
+  opening = models.IntegerField(default=0)
+  breaks = models.IntegerField(default=0)
+  sick = models.IntegerField(default=0)
+  closing = models.IntegerField(default=0)
   
   def __str__(self):
     return self.facility
