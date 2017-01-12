@@ -2,44 +2,41 @@
 
 {% block content %}
     		<div class="row vertical-center-row">
-    		    <!-- POSITION AND FACILITY -->
+
         		<div class="text-center col-md-12">
 
-              <form action="post_response/" class="form-inline" method="post">
-                {% csrf_token %}
-                {{ form }}
-              <input type="submit" value="Submit"/>
-            </form>
-
-        		  <form class="form-inline">
+        		  <form class="form-inline" action="post_response/" method="post">
+        		    {% csrf_token %}
+        		    <div id="step0">
+        		    <!-- POSITION AND FACILITY -->
                 <div class="form-group">
-                  <label for="position">I am a</label>
-                    <select class="form-control" id="position">
-                      <option>Social Worker</option>
-                      <option>Patient Care Technician</option>
-                      <option>Registered Nurse</option>
+                  <label for="id_position">I am a</label>
+                    <select id="id_position" name="position" required="">
+                      <option value="Social Worker">Social Worker</option>
+                      <option value="Patient Care Technician">Patient Care Technician</option>
+                      <option value="Registered Nurse">Registered Nurse</option>
                     </select>
                 </div>
                 <div class="form-group">
-                  <label for="facility">and I work at</label>
-                    <select class="form-control" id="facility">
-                      <option>DaVita</option>
-                      <option>Fresenius Medical Care</option>
-                      <option>Other Facility</option>
-                    </select>
+                  <label for="id_facility">and I work at</label>
+                      <select id="id_facility" name="facility" required="">
+                        <option value="DaVita">DaVita</option>
+                        <option value="Fresenius Medical Care">Fresenius Medical Care</option>
+                        <option value="Other Facility">Other Facility</option>
+                      </select>
                 </div>
                 <div id="btnStep0" class="btn btn-default">Submit</div>
-              </form>
 			      </div>
-    		    <!-- FACILITY LOCATION -->
-        		<div id="step1" class="text-center col-md-12">
-        		  <form class="form-inline">
+    		        <!-- FACILITY LOCATION -->
+        		    <div id="step1">
                 <div class="form-group">
-                  <label for="location">My clinic is located in</label>
-                  <input id="location" type="text">
+                  <label for="id_location">My clinic is located in</label>
+                    <input id="id_location" maxlength="100" name="location" type="text" required="">
                 </div>
-                <div id="btnStep2" class="btn btn-default">Submit</div>
+                <input type="submit" value="Submit"/>
+            </div>
               </form>
 			      </div>
     		</div>
+    		
 {% endblock %}

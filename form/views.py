@@ -5,8 +5,7 @@ from .forms import ResponseForm
 
 # Create your views here.
 def index(request):
-	form = ResponseForm()
-	return render(request, 'index.html', {'form':form})
+  return render(request, 'index.html')
 
 def post_response(request):
 	form = ResponseForm(request.POST)
