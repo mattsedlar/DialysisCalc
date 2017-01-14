@@ -10,7 +10,6 @@
         		    <div id="step0">
         		    <!-- POSITION AND FACILITY -->
                 <div class="form-group">
-                    <input id="id_rid" name="rid" type="hidden" value="{{ last_rid }}" required="">
                     <label for="id_position">I am a</label>
                       <select id="id_position" name="position" class="form-control" required="">
                         <option value="Social Worker">Social Worker</option>
@@ -38,18 +37,18 @@
                 </div>
                 <!-- PATIENT LOAD DATA -->
                 <div id="step2">
-                  <div class="form-group text-left">
+                  <div class="form-group text-right">
                     <h2>My Daily Patient Load</h2>
                     <label for="id_opening">Opening: </label>
-                    <input id="id_opening" name="opening" type="number" required=""><br/>
+                    <input id="id_opening" name="opening" class="form-control" type="number" required=""><br/>
                     <label for="id_breaks">Breaks/Meals: </label>
-                    <input id="id_breaks" name="breaks" type="number" required=""><br/>
+                    <input id="id_breaks" name="breaks" class="form-control" type="number" required=""><br/>
                     <label for="id_sick">When someone calls out sick: </label>
-                    <input id="id_sick" name="sick" type="number" required=""><br/>
+                    <input id="id_sick" name="sick" class="form-control" type="number" required=""><br/>
                     <label for="id_closing">Closing: </label>
-                    <input id="id_closing" name="closing" type="number" required=""><br/>
-                  </div><br/>
-                  <input type="submit" value="Submit"/>
+                    <input id="id_closing" name="closing" class="form-control" type="number" required=""><br/>
+                  </div><br/><br/>
+                  <input type="submit" class="btn btn-group" value="Submit"/>
                 </div>
 
               </form>
