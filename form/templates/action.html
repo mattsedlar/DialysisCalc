@@ -1,7 +1,71 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="row vertical-center-row">
 
-<h1>Thanks!</h1>
+  <div class="text-center col-md-12">
+    
+    <div id="step0">
+    
+        <div class="row">
+    
+            <div class="col-md-6 text-right">
+                <h2>My daily patient load</h2>
+                <ul>
+                    <li> Opening: </li>
+                    <li> Breaks/Meals: </li>
+                    <li> When someone calls out sick: </li>
+                    <li> Closing: </li>
+                </ul>
+            </div>
+    
+            <div class="col-md-6 text-right">
+                <h2>My daily patient load under the Safe Staffing Ratio</h2>
+                <ul>
+                    <li> Opening: </li>
+                    <li> Breaks/Meals: </li>
+                    <li> When someone calls out sick: </li>
+                    <li> Closing: </li>
+                </ul>
+            </div>
+    
+         </div>        
+      
+         <div id="btnStep0" class="btn btn-default">Tell me more about Safe Staffing Ratio</div>
+    
+    </div>
+    
+    <div id="step1">
+    
+        <p>Staffing legislation mandating no more than <span id="ratio"></span> patients per 1 <span id="title"></span> means every dialysis employer has to guarantee that number—even on breaks and lunches, even if someone calls out sick.</p>
+        
+        <div id="btnStep1" class="btn btn-default">Let's do it</div>
+
+    </div>
+
+    <div id="step2">
+
+        <h2>Crisis:</h2>
+
+        <h2>Our role in change:</h2>
+    
+        <form class="form-inline" action="post_contact/" method="post">
+        {% csrf_token %}
+                 <div class="form-group">
+                    <label for="id_name">My name is</label>
+                       <input id="id_name" maxlength="100" name="name" type="text" class="form-control" required="">                   
+                  </div>   
+                  <div class="form-group">
+                    <label for="id_email">My name is</label>
+                       <input id="id_email" maxlength="100" name="email" type="text" class="form-control" required="">                   
+                  </div>   
+                  <input type="submit" class="btn btn-group" value="YES! I want to make my hospital safer."/>                 
+        </form>
+    </div>
+
+    </div>
+    
+  </div>
+ 
 
 {% endblock %}
