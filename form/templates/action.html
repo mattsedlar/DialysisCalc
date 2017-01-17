@@ -11,17 +11,17 @@
     
             <div class="col-md-6 text-right">
                 <h2>My daily patient load</h2>
-                <ul>
-                    <li> Opening: </li>
-                    <li> Breaks/Meals: </li>
-                    <li> When someone calls out sick: </li>
-                    <li> Closing: </li>
+                <ul class="loads">
+                    <li> Opening: <span class="loads_value">{{ query.opening }}</span></li>
+                    <li> Breaks/Meals: <span class="loads_value">{{ query.breaks }}</span></li>
+                    <li> When someone calls out sick: <span class="loads_value">{{ query.sick }}</span></li>
+                    <li> Closing: <span class="loads_value">{{ query.closing }}</span></li>
                 </ul>
             </div>
     
             <div class="col-md-6 text-right">
                 <h2>My daily patient load under the Safe Staffing Ratio</h2>
-                <ul>
+                <ul class="loads">
                     <li> Opening: </li>
                     <li> Breaks/Meals: </li>
                     <li> When someone calls out sick: </li>

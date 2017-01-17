@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
 from .models import Response
 from .forms import ResponseForm
@@ -18,7 +18,9 @@ def post_response(request):
 			sick = form.cleaned_data['sick'],
 			closing = form.cleaned_data['closing'])
 		r.save()
-	return HttpResponseRedirect('/action' + '?id=' + str(r.id))
+	return HttpResponseRedirect('/action'+'?response_id='+str(r.id))
 	
 def action(request):
-	return render(request, 'action.html')
+    rid = request.GET.get('response_id')
+    query = get_object_or_404(Response,pk=rid)
+    return render(request, 'action.html', {'query':query} )

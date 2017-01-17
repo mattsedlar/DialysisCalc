@@ -19,3 +19,17 @@ body {
 #step1, #step2 {
   display: none;
 }
+
+/* ACTION STYLES */
+
+.loads li {
+    list-style-type: none;
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.loads_value {
+    background-color: #fff;
+    padding: 6px;
+    color: #000;
+}
