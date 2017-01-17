@@ -18,3 +18,8 @@ class ResponseForm(forms.Form):
   breaks = forms.IntegerField()
   sick = forms.IntegerField()
   closing = forms.IntegerField()
+  
+class ContactForm(forms.Form):
+    rid = forms.IntegerField()
+    name = forms.CharField(max_length=100)
+    email = forms.CharField(max_length=100)

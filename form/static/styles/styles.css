@@ -1,11 +1,19 @@
+html {
+  font-size: 16px;
+}
+
+html, body, .container-table {
+    height: 100%;
+}
+
 body {
  background-color: #36577f;
  color: #fff;
+ font-size: 62.5%;
 }
 
- html, body, .container-table {
-    height: 100%;
-}
+p, label { font-size: 2em; }
+
 .container-table {
     display: table;
 }
