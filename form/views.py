@@ -1,16 +1,19 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
+from django.utils.crypto import get_random_string
 from .models import Response
 from .forms import ResponseForm, ContactForm
 
 # Create your views here.
 def index(request):
-  return render(request, 'index.html')
+  unique_key = get_random_string(length=8)
+  return render(request, 'index.html', {'unique_key': unique_key } )
 
 def post_response(request):
 	form = ResponseForm(request.POST)
 	if form.is_valid():
-		r = Response(position = form.cleaned_data['position'],
+		r = Response(unique_key = form.cleaned_data['unique_key'],
+		    position = form.cleaned_data['position'],
 			facility = form.cleaned_data['facility'],
 			location = form.cleaned_data['location'],
 			opening = form.cleaned_data['opening'],
@@ -18,12 +21,20 @@ def post_response(request):
 			sick = form.cleaned_data['sick'],
 			closing = form.cleaned_data['closing'])
 		r.save()
-	return HttpResponseRedirect('/action'+'?response_id='+str(r.id))
+	return HttpResponseRedirect('/action'+'?response_id='+ str(r.id) +
+	                            '&key=' + r.unique_key)
 	
 def action(request):
     rid = request.GET.get('response_id')
+    key = request.GET.get('key')
     query = get_object_or_404(Response,pk=rid)
-    return render(request, 'action.html', {'query':query} )
+    if key == query.unique_key:
+        return render(request, 'action.html', {'query':query} )
+    else:
+        return render(request, '404.html')
+        
+def error(request):
+    return render(request, '404.html')
     
 def post_contact(request):
     form = ContactForm(request.POST)

@@ -11,6 +11,7 @@ class ResponseForm(forms.Form):
     ('Fresenius Medical Care', 'Fresenius Medical Care'),
     ('Other Facility','Other Facility')
     )
+  unique_key = forms.CharField(max_length=8)
   position = forms.ChoiceField(widget=forms.Select, choices=POS_OPTIONS, label="I am a ")
   facility = forms.ChoiceField(widget=forms.Select, choices=FAC_OPTIONS, label="and I work at ")
   location = forms.CharField(max_length=100)

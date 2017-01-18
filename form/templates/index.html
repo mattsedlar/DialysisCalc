@@ -8,6 +8,7 @@
         		  <form class="form-inline" action="post_response/" method="post">
         		    {% csrf_token %}
         		    <div id="step0">
+        		    <input type="hidden" id="id_unique_key" name="unique_key" value="{{ unique_key }}" />
         		    <!-- POSITION AND FACILITY -->
                 <div class="form-group">
                     <label for="id_position">I am a</label>

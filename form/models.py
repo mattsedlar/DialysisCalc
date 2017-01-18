@@ -4,6 +4,7 @@ from django.db import models
 
 # Create your models here.
 class Response(models.Model):
+  unique_key = models.CharField(default='',max_length=8)
   position = models.CharField(max_length=100)
   facility = models.CharField(max_length=100)
   location = models.CharField(max_length=100)
