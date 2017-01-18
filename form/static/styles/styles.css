@@ -1,4 +1,5 @@
 html {
+  font-family: 'Roboto',sans-serif;
   font-size: 16px;
 }
 
@@ -22,10 +23,37 @@ p, label { font-size: 2em; }
     vertical-align: middle;
 }
 
+.btn {
+  background-color: #75c591;
+  border-color: #75c591;
+  color: #fff;
+}
+
 /* SEGMENTATION */
 
-#step1, #step2 {
+#step1, #step2, #step4, #step5 {
   display: none;
+}
+
+#response-load, #safe-load {
+  padding: 24px;
+}
+
+#safe-load {
+  background-color: #f8a489;
+  color:#bf5582;
+}
+
+#step4 h2 {
+  color: #36577f;
+}
+
+#step5 h2>small {
+  color: #3d7c8e;
+}
+
+#id_opening, #id_breaks, #id_sick, #id_closing {
+  width: 100px;
 }
 
 /* ACTION STYLES */
@@ -37,7 +65,10 @@ p, label { font-size: 2em; }
 }
 
 .loads_value {
+    border-radius: 6px;
+    background: #fff;
     background-color: #fff;
-    padding: 6px;
+    padding: 6px 12px;
     color: #000;
+
 }

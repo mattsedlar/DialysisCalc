@@ -28,8 +28,19 @@ def action(request):
     rid = request.GET.get('response_id')
     key = request.GET.get('key')
     query = get_object_or_404(Response,pk=rid)
+    
+    # security layer
     if key == query.unique_key:
-        return render(request, 'action.html', {'query':query} )
+      
+      if query.position == 'Social Worker':
+        ratios = 75
+      elif query.position == 'Patient Care Technician':
+        ratios = 3
+      else:
+        ratios = 8
+        
+      return render(request, 'action.html', {'query':query, 'ratios': ratios } )
+    
     else:
         return render(request, '404.html')
         
@@ -44,5 +55,5 @@ def post_contact(request):
         query.name = form.cleaned_data['name']
         query.email = form.cleaned_data['email']
         query.save()
-    # This redirect needs to be changed     
-    return HttpResponseRedirect('/')
+    # This redirect needs to be changed
+    return HttpResponseRedirect('http://morethannumbers.org')
