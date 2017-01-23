@@ -13,13 +13,15 @@ def post_response(request):
 	form = ResponseForm(request.POST)
 	if form.is_valid():
 		r = Response(unique_key = form.cleaned_data['unique_key'],
-		    position = form.cleaned_data['position'],
-			facility = form.cleaned_data['facility'],
-			location = form.cleaned_data['location'],
-			opening = form.cleaned_data['opening'],
-			breaks = form.cleaned_data['breaks'],
-			sick = form.cleaned_data['sick'],
-			closing = form.cleaned_data['closing'])
+  		    position = form.cleaned_data['position'],
+    			facility = form.cleaned_data['facility'],
+    			location = form.cleaned_data['location'],
+    			clinic_name = form.cleaned_data['clinic_name'],
+    			opening = form.cleaned_data['opening'],
+    			mid = form.cleaned_data['mid'],
+    			breaks = form.cleaned_data['breaks'],
+    			sick = form.cleaned_data['sick'],
+    			closing = form.cleaned_data['closing'])
 		r.save()
 	return HttpResponseRedirect('/action'+'?response_id='+ str(r.id) +
 	                            '&key=' + r.unique_key)

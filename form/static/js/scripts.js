@@ -9,4 +9,7 @@ $(document).ready(function(){
     $('body').css('background-color',colors[step]);
     $('#step'+ step).css('display','block');
   });
+  $(document).on("click", "#id_opening, #id_mid, #id_breaks, #id_sick, #id_closing", function() {
+    $(this).css('color','#000');
+  });
 });

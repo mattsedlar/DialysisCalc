@@ -52,7 +52,8 @@ p, label { font-size: 2em; }
   color: #3d7c8e;
 }
 
-#id_opening, #id_breaks, #id_sick, #id_closing {
+#id_opening, #id_mid, #id_breaks, #id_sick, #id_closing {
+  color: #fff;
   width: 100px;
 }
 
