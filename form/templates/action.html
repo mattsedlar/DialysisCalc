@@ -32,26 +32,24 @@
         <div class="row">
     
             <div class="col-md-6 text-right" id="response-load">
-                <h2><strong>My daily patient load</strong></h2>
-                <h3>(Below is number of patients you typically have)</h3><br/><br/>
+                <h2><strong>My current patient load</strong></h2>
                 <ul class="loads">
-                    <li> Opening <span class="loads_value">{{ query.opening }}</span></li>
+                    <li> Start of shift or opening <span class="loads_value">{{ query.opening }}</span></li>
                     <li> Mid-shift <span class="loads_value">{{ query.mid }}</span></li>                    
                     <li> When someone goes on break <span class="loads_value">{{ query.breaks }}</span></li>
                     <li> When someone calls out sick <span class="loads_value">{{ query.sick }}</span></li>
-                    <li> Closing <span class="loads_value">{{ query.closing }}</span></li>
+                    <li> End of shift or closing <span class="loads_value">{{ query.closing }}</span></li>
                 </ul>
             </div>
     
             <div class="col-md-6 text-left" id="safe-load">
-                <h2><strong>My daily patient load</strong></h2>
-                <h3>under the Safe Staffing Law</h3><br/><br/>
+                <h2><strong>My patient load with safe staffing</strong></h2>
                 <ul class="loads">
-                    <li> <span class="loads_value">{{ ratios }}</span> Opening </li>
+                    <li> <span class="loads_value">{{ ratios }}</span> Start of shift or opening </li>
                     <li> <span class="loads_value">{{ ratios }}</span> Mid-shift </li>
                     <li> <span class="loads_value">{{ ratios }}</span> When someone goes on break </li>                    
                     <li> <span class="loads_value">{{ ratios }}</span> When someone calls out sick </li>
-                    <li> <span class="loads_value">{{ ratios }}</span> Closing </li>
+                    <li> <span class="loads_value">{{ ratios }}</span> End of shift or closing </li>
                 </ul>
             </div>
     
