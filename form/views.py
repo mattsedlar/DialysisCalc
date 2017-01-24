@@ -56,6 +56,8 @@ def post_contact(request):
         query = get_object_or_404(Response,pk=rid)
         query.name = form.cleaned_data['name']
         query.email = form.cleaned_data['email']
+        query.zipcode = form.cleaned_data['zipcode']
+        query.phone_number = form.cleaned_data['phone_number']
         query.save()
     # This redirect needs to be changed
     return HttpResponseRedirect('http://morethannumbers.org')
