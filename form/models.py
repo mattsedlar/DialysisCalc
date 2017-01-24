@@ -17,7 +17,7 @@ class Response(models.Model):
   closing = models.IntegerField(default=0)
   name = models.CharField(null=True,max_length=100)
   email = models.CharField(null=True,max_length=100)
-  zipcode = models.CharField(max_length=5, default="99999")
+  zipcode = models.CharField(max_length=5, default="")
   # phone regex validation
   phone_regex = RegexValidator(regex=r'^[2-9]\d{2}-\d{3}-\d{4}$', message="Phone number must be entered in the format: '999-999-9999'. Up to 10 digits allowed.")
   phone_number = models.CharField(validators=[phone_regex], blank=True, max_length=12) # validators should be a list

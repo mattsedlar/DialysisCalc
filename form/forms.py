@@ -26,5 +26,5 @@ class ContactForm(forms.Form):
     rid = forms.IntegerField()
     name = forms.CharField(max_length=100)
     email = forms.CharField(max_length=100)
-    zipcode = forms.CharField(max_length=5)
-    phone_number = forms.CharField(max_length=12)
+    zipcode = forms.CharField(required=False,max_length=5)
+    phone_number = forms.CharField(required=False,max_length=12)
