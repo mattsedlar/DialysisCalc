@@ -18,4 +18,4 @@ class Response(models.Model):
   email = models.CharField(null=True,max_length=100)
   
   def __str__(self):
-    return self.name + ": " +self.position + ", " + self.facility
+    return str(self.name) + ": " + str(self.position) + ", " + str(self.facility)
