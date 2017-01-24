@@ -40,16 +40,8 @@ p, label { font-size: 2em; }
 }
 
 #safe-load {
-  background-color: #f8a489;
-  color:#bf5582;
-}
-
-#step4 h2 {
-  color: #36577f;
-}
-
-#step5 h2>small {
-  color: #3d7c8e;
+  background-color: #DDDDDD;
+  color:#000;
 }
 
 #id_opening, #id_mid, #id_breaks, #id_sick, #id_closing {

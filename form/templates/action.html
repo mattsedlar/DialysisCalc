@@ -17,7 +17,7 @@
         <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="{% static 'styles/styles.css' %}">
 	<style>
-	  body { background-color: #bf5582;}
+	  body { background-color: #93aeb6;}
 	</style>
 </head>
 
@@ -31,59 +31,74 @@
     
         <div class="row">
     
-            <div class="col-md-5 text-right" id="response-load">
-                <h2><strong>My daily patient load</strong></h2><br/><br/>
+            <div class="col-md-6 text-right" id="response-load">
+                <h2><strong>My daily patient load</strong></h2>
+                <h3>(Below is number of patients you typically have)</h3><br/><br/>
                 <ul class="loads">
-                    <li> Opening: <span class="loads_value">{{ query.opening }}</span></li>
-                    <li> Breaks/Meals: <span class="loads_value">{{ query.breaks }}</span></li>
-                    <li> When someone calls out sick: <span class="loads_value">{{ query.sick }}</span></li>
-                    <li> Closing: <span class="loads_value">{{ query.closing }}</span></li>
+                    <li> Opening <span class="loads_value">{{ query.opening }}</span></li>
+                    <li> Mid-shift <span class="loads_value">{{ query.mid }}</span></li>                    
+                    <li> When someone goes on break <span class="loads_value">{{ query.breaks }}</span></li>
+                    <li> When someone calls out sick <span class="loads_value">{{ query.sick }}</span></li>
+                    <li> Closing <span class="loads_value">{{ query.closing }}</span></li>
                 </ul>
             </div>
     
-            <div class="col-md-6 col-md-offset-1 text-right" id="safe-load">
-                <h2><strong>My daily patient load<br/>under the Safe Staffing Ratio</strong></h2>
+            <div class="col-md-6 text-left" id="safe-load">
+                <h2><strong>My daily patient load</strong></h2>
+                <h3>under the Safe Staffing Law</h3><br/><br/>
                 <ul class="loads">
-                    <li> Opening: <span class="loads_value">{{ ratios }}</span></li>
-                    <li> Breaks/Meals: <span class="loads_value">{{ ratios }}</span></li>
-                    <li> When someone calls out sick: <span class="loads_value">{{ ratios }}</span></li>
-                    <li> Closing: <span class="loads_value">{{ ratios }}</span></li>
+                    <li> <span class="loads_value">{{ ratios }}</span> Opening </li>
+                    <li> <span class="loads_value">{{ ratios }}</span> Mid-shift </li>
+                    <li> <span class="loads_value">{{ ratios }}</span> When someone goes on break </li>                    
+                    <li> <span class="loads_value">{{ ratios }}</span> When someone calls out sick </li>
+                    <li> <span class="loads_value">{{ ratios }}</span> Closing </li>
                 </ul>
             </div>
     
          </div>
          <br/>
-         <div id="btnStep3" class="btn btn-default btn-lg">Tell me more about Safe Staffing Ratio</div>
+         <div id="btnStep3" class="btn btn-default btn-lg">How does this work?</div>
     
     </div>
     
     <div id="step4">
-    
-        <h2><strong>Staffing legislation mandating no more than <span id="ratio">{{ ratios }}</span> patients per 1 {{ query.position }} means every dialysis employer has to guarantee that number—even on breaks and lunches, even if someone calls out sick.</strong></h2>
+        <h1><strong>How Safe Staffing Works</strong></h1>
+        <h2>Staffing legislation mandating no more than <span id="ratio">{{ ratios }}</span> patients per 1 {{ query.position }} means every dialysis employer must guarantee that number 
+is not exceeded — even on breaks and lunches; even if someone calls out sick. </h2><br/><br/>
         
-        <div id="btnStep4" class="btn btn-default btn-lg">Let's do it</div>
+        <div id="btnStep4" class="btn btn-default btn-lg">I want safe staffing!</div>
 
     </div>
 
     <div id="step5">
+        
+        <h2 class="text-left"><strong>It's Time to #Fix Dialysis</strong><br/><small>Our legislation would improve patient care and working conditions by setting safe staffing levels at dialysis clinics, yearly inspections and a minimum of 45 minutes between the end of one patient’s visit and the start of another. It would apply to registered nurses, patient care technicians and social workers.</small> </h2>
 
-        <h2><strong>Crisis:</strong> <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</small> </h2>
-
-        <h2><strong>Our role in change:</strong> <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</small></h2>
+        <h2 class="text-left"><strong>I Support Safe Staffing</strong></h2>
     
-        <form class="form-inline" action="post_contact/" method="post">
+        <form action="post_contact/" method="post">
         {% csrf_token %}
                  <input type="hidden" id="id_rid" name="rid" value="{{query.id}}" />
-                 <div class="form-group">
-                    <label for="id_name">My name is</label>
+                 <div class="form-group row text-left">
+                    <label for="id_name" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
                        <input id="id_name" maxlength="100" name="name" type="text" class="form-control input-lg" required="">
+                       </div>
                   </div>
-                  <div class="form-group">
-                    <label for="id_email">and my email is</label>
-                       <input id="id_email" maxlength="100" name="email" type="text" class="form-control input-lg" required="">
+                  <div class="form-group row text-left">
+                    <label for="id_email" class="col-sm-2 col-form-label">Email</label>
+                      <div class="col-sm-10">
+                       <input id="id_email" maxlength="100" name="email" type="email" class="form-control input-lg" required="">
+                       </div>
                   </div>
-                  <input type="submit" class="btn btn-default btn-lg" value="YES! I want to make my hospital safer."/>
+                    <h2 class="text-left"><small>Dialysis helps people with kidney failure stay alive, but patient care is suffering from inadequate staffing and unsanitary conditions. </small></h2>
+                    <h2 class="text-left"><small>Going through dialysis is difficult for our friends and loved ones. Let’s make sure they are treated with the dignity and quality care they deserve. </small></h2>
+                    <h2 class="text-left"><small>I support safe staffing levels, yearly inspections and a safe transition time between patients. </small></h2> 
+                  <input type="submit" class="btn btn-default btn-lg" value="SUBMIT"/>
         </form>
+        <br/><br/>
+        <p class="small text-left">By providing my phone  number,  I understand  that SEIU and its locals and affiliates may use automated  calling technologies  and/or text message me on my cellular phone  on a periodic basis. SEIU will never charge for text message alerts. Carrier message and data rates may apply to such alerts. Text STOP to 787753 to stop receiving messages. Text HELP to 787753 for more information. </p>
+      
     </div>
 
     </div>
