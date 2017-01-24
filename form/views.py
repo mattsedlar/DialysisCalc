@@ -10,20 +10,25 @@ def index(request):
   return render(request, 'index.html', {'unique_key': unique_key } )
 
 def post_response(request):
-	form = ResponseForm(request.POST)
-	if form.is_valid():
-		r = Response(unique_key = form.cleaned_data['unique_key'],
-  		    position = form.cleaned_data['position'],
-    			facility = form.cleaned_data['facility'],
-    			location = form.cleaned_data['location'],
-    			clinic_name = form.cleaned_data['clinic_name'],
-    			opening = form.cleaned_data['opening'],
-    			mid = form.cleaned_data['mid'],
-    			breaks = form.cleaned_data['breaks'],
-    			sick = form.cleaned_data['sick'],
-    			closing = form.cleaned_data['closing'])
-		r.save()
-	return HttpResponseRedirect('/action'+'?response_id='+ str(r.id) +
+    form = ResponseForm(request.POST)
+    
+    if form.is_valid():
+        if form.cleaned_data['all_shifts'] != 0:
+            shifts = form.cleaned_data['all_shifts']
+        elif form.cleaned_data['all_shifts'] == 0:
+            shifts = form.cleaned_data['opening']
+        r = Response(unique_key = form.cleaned_data['unique_key'],
+  		             position = form.cleaned_data['position'],
+    			     facility = form.cleaned_data['facility'],
+    			     location = form.cleaned_data['location'],
+    			     clinic_name = form.cleaned_data['clinic_name'],
+    			     opening = shifts,
+    			     mid = form.cleaned_data['mid'],
+    			     breaks = form.cleaned_data['breaks'],
+    			     sick = form.cleaned_data['sick'],
+    			     closing = form.cleaned_data['closing'])
+        r.save()
+    return HttpResponseRedirect('/action'+'?response_id='+ str(r.id) +
 	                            '&key=' + r.unique_key)
 	
 def action(request):

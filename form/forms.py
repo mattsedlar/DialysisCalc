@@ -21,6 +21,8 @@ class ResponseForm(forms.Form):
   breaks = forms.IntegerField(required=False)
   sick = forms.IntegerField(required=False)
   closing = forms.IntegerField(required=False)
+  # social worker exception
+  all_shifts = forms.IntegerField(required=False)
   
 class ContactForm(forms.Form):
     rid = forms.IntegerField()

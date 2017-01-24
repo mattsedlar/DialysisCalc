@@ -35,6 +35,10 @@ p, label { font-size: 2em; }
   display: none;
 }
 
+#social {
+    display: none;
+ }
+
 #response-load, #safe-load {
   padding: 24px;
 }
@@ -44,7 +48,7 @@ p, label { font-size: 2em; }
   color:#000;
 }
 
-#id_opening, #id_mid, #id_breaks, #id_sick, #id_closing {
+#id_all, #id_opening, #id_mid, #id_breaks, #id_sick, #id_closing {
   color: #fff;
   width: 100px;
 }
