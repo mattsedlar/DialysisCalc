@@ -33,7 +33,8 @@
     
             <div class="col-md-6 text-right" id="response-load">
                 <h2><strong>My current patient load</strong></h2>
-                <ul class="loads">
+                <p><span class="loads_value" style="{{ social }}">{{query.opening}}</span></p>
+                <ul class="loads" style="{{ other }}">
                     <li> Start of shift or opening <span class="loads_value">{{ query.opening }}</span></li>
                     <li> Mid-shift <span class="loads_value">{{ query.mid }}</span></li>                    
                     <li> When someone goes on break <span class="loads_value">{{ query.breaks }}</span></li>
@@ -44,7 +45,8 @@
     
             <div class="col-md-6 text-left" id="safe-load">
                 <h2><strong>My patient load with safe staffing</strong></h2>
-                <ul class="loads">
+                <p><span class="loads_value" style="{{ social }}">{{ ratios }}</span></p>
+                <ul class="loads" style="{{ other }}">
                     <li> <span class="loads_value">{{ ratios }}</span> Start of shift or opening </li>
                     <li> <span class="loads_value">{{ ratios }}</span> Mid-shift </li>
                     <li> <span class="loads_value">{{ ratios }}</span> When someone goes on break </li>                    

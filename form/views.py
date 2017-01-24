@@ -41,12 +41,18 @@ def action(request):
       
       if query.position == 'Social Worker':
         ratios = 75
+        social = ""
+        other = "display:none;"
       elif query.position == 'Patient Care Technician':
         ratios = 3
+        other = ""
+        social = "display:none;"
       else:
         ratios = 8
+        other = ""
+        social = "display:none;"
         
-      return render(request, 'action.html', {'query':query, 'ratios': ratios } )
+      return render(request, 'action.html', {'query':query, 'ratios': ratios, 'social': social, 'other': other } )
     
     else:
         return render(request, '404.html')
