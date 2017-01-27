@@ -12,13 +12,16 @@ body {
  font-size: 62.5%;
 }
 
+h1, h2 {
+    font-weight: bold;
+}
+
 h1, h2, h3 {
   font-family: 'Varela Round', sans-serif;
   color: #492c7c;
-  font-weight: bold;
 }
 
-p, label {
+p, label, ul>li {
   font-size: 2em;
   font-family: 'Varela Round', sans-serif;
 }
@@ -29,6 +32,10 @@ p, label {
 .vertical-center-row {
     display: table-cell;
     vertical-align: middle;
+}
+
+select.form-control, .btn {
+  font-family: 'Varela Round', sans-serif;
 }
 
 
@@ -51,7 +58,7 @@ p, label {
   color:#000;
 }
 
-#id_all, #id_opening, #id_mid, #id_breaks, #id_sick, #id_closing {
+#id_all_shifts, #id_opening, #id_mid, #id_breaks, #id_sick, #id_closing {
   color: #fff;
   width: 100px;
 }
@@ -68,7 +75,7 @@ p, label {
     border-radius: 6px;
     background: #fff;
     background-color: #fff;
-    padding: 6px 12px;
+    padding: 3px 20px;
     color: #000;
-
+    border: 1px solid #ccc;
 }

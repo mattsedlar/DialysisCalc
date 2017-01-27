@@ -11,7 +11,7 @@ $(document).ready(function(){
     $('#step'+ step).css('display','block');
   });
   // Prevent Zero Values for Shifts
-  $(document).on("click", "#id_all, #id_opening, #id_mid, #id_breaks, #id_sick, #id_closing", function() {
+  $(document).on("click", "#id_all_shifts, #id_opening, #id_mid, #id_breaks, #id_sick, #id_closing", function() {
     $(this).css('color','#000');
   });
   // Social Worker Exception

@@ -33,11 +33,11 @@
                 <h2><strong>My current patient load</strong></h2>
                 <p><span class="loads_value" style="{{ social }}">{{query.opening}}</span></p>
                 <ul class="loads" style="{{ other }}">
-                    <li> Start of shift or opening <span class="loads_value">{{ query.opening }}</span></li>
+                    <li> At shift start <span class="loads_value">{{ query.opening }}</span></li>
                     <li> Mid-shift <span class="loads_value">{{ query.mid }}</span></li>
-                    <li> When someone goes on break <span class="loads_value">{{ query.breaks }}</span></li>
-                    <li> When someone calls out sick <span class="loads_value">{{ query.sick }}</span></li>
-                    <li> End of shift or closing <span class="loads_value">{{ query.closing }}</span></li>
+                    <li> During breaks <span class="loads_value">{{ query.breaks }}</span></li>
+                    <li> If someone is out sick <span class="loads_value">{{ query.sick }}</span></li>
+                    <li> At shift end <span class="loads_value">{{ query.closing }}</span></li>
                 </ul>
             </div>
     
@@ -45,11 +45,11 @@
                 <h2><strong>My patient load with safe staffing</strong></h2>
                 <p><span class="loads_value" style="{{ social }}">{{ ratios }}</span></p>
                 <ul class="loads" style="{{ other }}">
-                    <li> <span class="loads_value">{{ ratios }}</span> Start of shift or opening </li>
-                    <li> <span class="loads_value">{{ ratios }}</span> Mid-shift </li>
-                    <li> <span class="loads_value">{{ ratios }}</span> When someone goes on break </li>
-                    <li> <span class="loads_value">{{ ratios }}</span> When someone calls out sick </li>
-                    <li> <span class="loads_value">{{ ratios }}</span> End of shift or closing </li>
+                    <li> <span class="loads_value">{{ ratios }}</span> patients</li>
+                    <li> <span class="loads_value">{{ ratios }}</span> patients</li>
+                    <li> <span class="loads_value">{{ ratios }}</span> patients</li>
+                    <li> <span class="loads_value">{{ ratios }}</span> patients</li>
+                    <li> <span class="loads_value">{{ ratios }}</span> patients</li>
                 </ul>
             </div>
     
@@ -61,8 +61,9 @@
     
     <div id="step4">
         <h1><strong>How Safe Staffing Works</strong></h1>
-        <h2>Staffing legislation mandating no more than <span id="ratio">{{ ratios }}</span> patients per 1 {{ query.position }} means every dialysis employer must guarantee that number
-is not exceeded — even on breaks and lunches; even if someone calls out sick. </h2><br/><br/>
+        <h3>Our staffing legislation mandates no more than:</h3>
+        <h3><strong><span id="ratio">{{ ratios }}</span> patients per 1 {{ query.position }}</strong></h3>
+        <h3 style="{{ other }}">Even on breaks and lunches; even if someone is out sick.</h3><br/><br/>
         
         <div id="btnStep4" class="btn btn-primary btn-lg btn-round">I want safe staffing!</div>
 
@@ -70,9 +71,15 @@ is not exceeded — even on breaks and lunches; even if someone calls out sick. 
 
     <div id="step5">
         
-        <h2 class="text-left"><strong>It's Time to #Fix Dialysis</strong><br/><small>Our legislation would improve patient care and working conditions by setting safe staffing levels at dialysis clinics, yearly inspections and a minimum of 45 minutes between the end of one patient’s visit and the start of another. It would apply to registered nurses, patient care technicians and social workers.</small> </h2>
+        <h1 class="text-left">It's Time to #Fix Dialysis</h1>
+        <h3 class="text-left">Our legislation would improve patient care & working conditions by guaranteeing:</h3>
+        <ul class="text-left">
+          <li>Safe staffing levels at all times for RNs, PCTs and Social Workers</li>
+          <li>A minimum of 45 minutes between patients</li>
+          <li>Yearly inspections and fines</li>
+        </ul>
 
-        <h2 class="text-left"><strong>I Support Safe Staffing</strong></h2>
+        <h2 class="text-left"><strong>Yes! I support safe staffing</strong></h2>
     
         <form action="post_contact/" method="post">
         {% csrf_token %}
@@ -98,7 +105,7 @@ is not exceeded — even on breaks and lunches; even if someone calls out sick. 
                       </div>
                   </div>
                   <input type="submit" class="btn btn-primary btn-lg btn-round" value="SUBMIT"/>
-                  <h2 class="text-left"><small>Insert worker petition text here</small></h2>
+                  
         </form>
         <br/><br/>
         <p class="text-left" style="font-size:12px">By providing my phone  number,  I understand  that SEIU and its locals and affiliates may use automated  calling technologies  and/or text message me on my cellular phone  on a periodic basis. SEIU will never charge for text message alerts. Carrier message and data rates may apply to such alerts. Text STOP to 787753 to stop receiving messages. Text HELP to 787753 for more information. </p>
