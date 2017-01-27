@@ -12,13 +12,11 @@
 
         <title></title>
         
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="{% static 'styles/styles.css' %}">
-	<style>
-	  body { background-color: #93aeb6;}
-	</style>
+
 </head>
 
 <body>
@@ -36,7 +34,7 @@
                 <p><span class="loads_value" style="{{ social }}">{{query.opening}}</span></p>
                 <ul class="loads" style="{{ other }}">
                     <li> Start of shift or opening <span class="loads_value">{{ query.opening }}</span></li>
-                    <li> Mid-shift <span class="loads_value">{{ query.mid }}</span></li>                    
+                    <li> Mid-shift <span class="loads_value">{{ query.mid }}</span></li>
                     <li> When someone goes on break <span class="loads_value">{{ query.breaks }}</span></li>
                     <li> When someone calls out sick <span class="loads_value">{{ query.sick }}</span></li>
                     <li> End of shift or closing <span class="loads_value">{{ query.closing }}</span></li>
@@ -49,7 +47,7 @@
                 <ul class="loads" style="{{ other }}">
                     <li> <span class="loads_value">{{ ratios }}</span> Start of shift or opening </li>
                     <li> <span class="loads_value">{{ ratios }}</span> Mid-shift </li>
-                    <li> <span class="loads_value">{{ ratios }}</span> When someone goes on break </li>                    
+                    <li> <span class="loads_value">{{ ratios }}</span> When someone goes on break </li>
                     <li> <span class="loads_value">{{ ratios }}</span> When someone calls out sick </li>
                     <li> <span class="loads_value">{{ ratios }}</span> End of shift or closing </li>
                 </ul>
@@ -57,16 +55,16 @@
     
          </div>
          <br/>
-         <div id="btnStep3" class="btn btn-default btn-lg">How does this work?</div>
+         <div id="btnStep3" class="btn btn-primary btn-lg btn-round">How does this work?</div>
     
     </div>
     
     <div id="step4">
         <h1><strong>How Safe Staffing Works</strong></h1>
-        <h2>Staffing legislation mandating no more than <span id="ratio">{{ ratios }}</span> patients per 1 {{ query.position }} means every dialysis employer must guarantee that number 
+        <h2>Staffing legislation mandating no more than <span id="ratio">{{ ratios }}</span> patients per 1 {{ query.position }} means every dialysis employer must guarantee that number
 is not exceeded — even on breaks and lunches; even if someone calls out sick. </h2><br/><br/>
         
-        <div id="btnStep4" class="btn btn-default btn-lg">I want safe staffing!</div>
+        <div id="btnStep4" class="btn btn-primary btn-lg btn-round">I want safe staffing!</div>
 
     </div>
 
@@ -97,9 +95,9 @@ is not exceeded — even on breaks and lunches; even if someone calls out sick. 
                      <label for="id_zipcode" class="col-sm-2 col-form-label">Zip</label>
                       <div class="col-sm-4">
                        <input id="id_zipcode" maxlength="100" name="zipcode" type="text" class="form-control input-lg" placeholder="99999">
-                      </div>                    
-                  </div> 
-                  <input type="submit" class="btn btn-default btn-lg" value="SUBMIT"/>
+                      </div>
+                  </div>
+                  <input type="submit" class="btn btn-primary btn-lg btn-round" value="SUBMIT"/>
                   <h2 class="text-left"><small>Insert worker petition text here</small></h2>
         </form>
         <br/><br/>

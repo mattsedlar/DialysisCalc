@@ -1,5 +1,4 @@
 html {
-  font-family: 'Roboto',sans-serif;
   font-size: 16px;
 }
 
@@ -8,12 +7,21 @@ html, body, .container-table {
 }
 
 body {
- background-color: #e3f0f7;
+ background-color: #fff;
  color: #000;
  font-size: 62.5%;
 }
 
-p, label { font-size: 2em; }
+h1, h2, h3 {
+  font-family: 'Varela Round', sans-serif;
+  color: #492c7c;
+  font-weight: bold;
+}
+
+p, label {
+  font-size: 2em;
+  font-family: 'Varela Round', sans-serif;
+}
 
 .container-table {
     display: table;
@@ -23,11 +31,6 @@ p, label { font-size: 2em; }
     vertical-align: middle;
 }
 
-.btn {
-  background-color: #008080;
-  border-color: #008080;
-  color: #fff;
-}
 
 /* SEGMENTATION */
 
