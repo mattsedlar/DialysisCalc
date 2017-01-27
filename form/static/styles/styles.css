@@ -65,6 +65,10 @@ select.form-control, .btn {
 
 /* ACTION STYLES */
 
+ul.loads {
+    padding-left: 0;
+}
+
 .loads li {
     list-style-type: none;
     margin-bottom: 12px;
@@ -78,4 +82,18 @@ select.form-control, .btn {
     padding: 3px 20px;
     color: #000;
     border: 1px solid #ccc;
+}
+
+
+@media screen and (max-width: 767px) {
+  form {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  p {
+    font-size: 1.5em;
+  }
+
 }
