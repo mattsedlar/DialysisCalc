@@ -49,8 +49,12 @@ select.form-control, .btn {
     display: none;
  }
 
-#response-load, #safe-load {
-  padding: 24px;
+.response-load {
+  text-align:right;
+}
+
+.safe-load {
+  text-align:left;
 }
 
 #safe-load {
@@ -65,16 +69,6 @@ select.form-control, .btn {
 
 /* ACTION STYLES */
 
-ul.loads {
-    padding-left: 0;
-}
-
-.loads li {
-    list-style-type: none;
-    margin-bottom: 12px;
-    font-size: 22px;
-}
-
 .loads_value {
     border-radius: 6px;
     background: #fff;
@@ -82,6 +76,7 @@ ul.loads {
     padding: 3px 20px;
     color: #000;
     border: 1px solid #ccc;
+    font-size:2em;
 }
 
 
@@ -95,5 +90,8 @@ ul.loads {
   p {
     font-size: 1.5em;
   }
+  .safe-load {
+    text-align: right;
+  }  
 
 }

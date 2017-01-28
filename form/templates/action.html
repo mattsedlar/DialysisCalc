@@ -26,37 +26,81 @@
   <div class="text-center col-md-12">
     
     <div id="step3">
-    
-        <div class="row">
-    
-            <div class="col-xs-6 text-right" id="response-load">
-                <h3><strong>My current patient load</strong></h3>
-                <p><span class="loads_value" style="{{ social }}">{{query.opening}}</span></p>
-                <ul class="loads" style="{{ other }}">
-                    <li> At shift start <span class="loads_value">{{ query.opening }}</span></li>
-                    <li> Mid-shift <span class="loads_value">{{ query.mid }}</span></li>
-                    <li> During breaks <span class="loads_value">{{ query.breaks }}</span></li>
-                    <li> If someone is out sick <span class="loads_value">{{ query.sick }}</span></li>
-                    <li> At shift end <span class="loads_value">{{ query.closing }}</span></li>
-                </ul>
-            </div>
-    
-            <div class="col-xs-6 text-left" id="safe-load">
-                <h3><strong>My patient load with safe staffing</strong></h3>
-                <p><span class="loads_value" style="{{ social }}">{{ ratios }}</span></p>
-                <ul class="loads" style="{{ other }}">
-                    <li> <span class="loads_value">{{ ratios }}</span> patients</li>
-                    <li> <span class="loads_value">{{ ratios }}</span> patients</li>
-                    <li> <span class="loads_value">{{ ratios }}</span> patients</li>
-                    <li> <span class="loads_value">{{ ratios }}</span> patients</li>
-                    <li> <span class="loads_value">{{ ratios }}</span> patients</li>
-                </ul>
-            </div>
-    
-         </div>
+
+                <div class="row">
+                <div class="col-xs-6" style="{{ social }}">
+                    <h3><strong>Current patient load</strong></h3>
+                    <p><span class="loads_value">{{query.opening}}</span></p>
+                </div>
+                <div class="col-xs-6" style="{{ social }}">
+                    <h3><strong>Patients with safe staffing</strong></h3>
+                    <p><span class="loads_value">{{ ratios }}</span></p>
+                </div>
+                </div>
+                
+                <div class="row" style="{{ other }}">
+                <h3>At shift start</h3>
+                <div class="col-xs-6 response-load">
+                    <p>Current load</p>
+                    <p><span class="loads_value">{{ query.opening }}</span></p>
+                </div>
+                <div class="col-xs-6 safe-load" style="{{ other }}">
+                    <p>Safe staffing</p>
+                    <p><span class="loads_value">{{ ratios }}</span>
+                </div>
+                </div>
+                
+                <div class="row" style="{{ other }}">
+                <h3>Mid-shift</h3>
+                <div class="col-xs-6 response-load">
+                    <p>Current load</p>
+                    <p><span class="loads_value">{{ query.mid }}</span></p>
+                </div>
+                <div class="col-xs-6 safe-load">
+                    <p>Safe staffing</p>
+                    <p><span class="loads_value">{{ ratios }}</span>
+                </div>
+                </div>
+                
+                <div class="row" style="{{ other }}">
+                <h3>During breaks</h3>                
+                <div class="col-xs-6 response-load">
+                    <p>Current load</p> 
+                    <p><span class="loads_value">{{ query.breaks }}</span></p>
+                </div>
+                <div class="col-xs-6 safe-load">
+                    <p>Safe staffing</p>
+                    <p><span class="loads_value">{{ ratios }}</span>
+                </div>
+                </div>  
+                
+                <div class="row" style="{{ other }}">
+                <h3>If someone is out sick</h3>                
+                <div class="col-xs-6 response-load">
+                    <p>Current load</p>
+                    <p><span class="loads_value">{{ query.sick }}</span></p>
+                </div>
+                <div class="col-xs-6 safe-load">
+                    <p>Safe staffing</p>
+                    <p><span class="loads_value">{{ ratios }}</span>
+                </div>
+                </div>                               
+
+                <div class="row" style="{{ other }}">
+                <h3>At shift end</h3>                
+                <div class="col-xs-6 response-load">
+                    <p>Current load</p> 
+                    <p><span class="loads_value">{{ query.closing }}</span></p>
+                </div>
+                <div class="col-xs-6 safe-load">
+                    <p>Safe staffing</p>
+                    <p><span class="loads_value">{{ ratios }}</span>
+                </div>
+                </div>  
+
          <br/>
          <div id="btnStep3" class="btn btn-primary btn-lg btn-round">How does this work?</div>
-    
+         <br/>
     </div>
     
     <div id="step4">
