@@ -20,7 +20,9 @@ def export_csv(modeladmin, request, queryset):
         smart_str(u"Sick"),
         smart_str(u"Closing"),
         smart_str(u"Name"),
-        smart_str(u"Email")
+        smart_str(u"Email"),
+        smart_str(u"Zip"),
+        smart_str(u"Phone Number")
     ])
     for obj in queryset:
         writer.writerow([
@@ -34,7 +36,9 @@ def export_csv(modeladmin, request, queryset):
             smart_str(obj.sick),
             smart_str(obj.closing),
             smart_str(obj.name),
-            smart_str(obj.email)
+            smart_str(obj.email),
+            smart_str(obj.zipcode),
+            smart_str(obj.phone_number)
         ])
     return response
 
