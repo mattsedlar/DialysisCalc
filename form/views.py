@@ -60,6 +60,9 @@ def action(request):
 def error(request):
     return render(request, '404.html')
     
+def thanks(request):
+    return render(request, 'thanks.html')
+    
 def post_contact(request):
     form = ContactForm(request.POST)
     if form.is_valid():
@@ -73,4 +76,4 @@ def post_contact(request):
             query.phone_number = form.cleaned_data['phone_number']
         query.save()
     # This redirect needs to be changed
-    return HttpResponseRedirect('http://morethannumbers.org')
+    return render(request, 'thanks.html')
