@@ -17,7 +17,7 @@
         		    <input type="hidden" id="id_unique_key" name="unique_key" value="{{ unique_key }}" />
         		    <!-- POSITION AND FACILITY -->
                 <div class="form-group">
-                    <label for="id_position">I am a </label>
+                    <label for="id_position">* I am a </label>
                       <select id="id_position" name="position" class="form-control input-lg" required="">
                         <option data-hidden="true">Choose Your Job</option>
                         <option value="Social Worker">Social Worker</option>
@@ -26,7 +26,7 @@
                       </select>
                   </div>
                   <div class="form-group">
-                    <label for="id_facility">and I work at </label>
+                    <label for="id_facility">* and I work at </label>
                         <select id="id_facility" name="facility" class="form-control input-lg" required="">
                             <option data-hidden="true">Choose Your Employer</option>
                           <option value="DaVita">DaVita</option>
@@ -35,6 +35,8 @@
                         </select>
                   </div>
                   <div id="btnStep0" class="btn btn-primary btn-lg btn-round">Next</div>
+                  <br/><br/>
+                  <p class="text-left"><small>* Required</small></p>
 			          </div>
     		        <!-- FACILITY LOCATION -->
         		    <div id="step1">
@@ -75,8 +77,9 @@
                           <input id="id_closing" name="closing" class="form-control input-lg" type="number" value='0'>
                         </div>
                         <br/><br/>
+                        <p>What would this look like with safe staffing ratios?</p>
                        </div>
-                        <input type="submit" class="btn btn-primary btn-lg btn-round" value="Submit"/>
+                        <input type="submit" class="btn btn-primary btn-lg btn-round" value="Take a Look"/>
 
                   </div>
               </form>
