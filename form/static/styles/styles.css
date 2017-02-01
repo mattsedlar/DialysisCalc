@@ -48,9 +48,14 @@ select.form-control, .btn {
 #social {
     display: none;
  }
+ 
+.yellow {
+  background-color:#FFFF00;
+}
 
 .response-load {
   text-align:right;
+  background-color: #FFFF00;
 }
 
 .safe-load {
@@ -78,11 +83,6 @@ select.form-control, .btn {
     border: 1px solid #ccc;
     font-size:2em;
 }
-
-.response-load .loads_value {
-    background-color: #eee;
-}
-
 
 @media screen and (max-width: 767px) {
   form {
