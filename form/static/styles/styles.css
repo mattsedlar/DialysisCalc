@@ -50,12 +50,12 @@ select.form-control, .btn {
  }
  
 .yellow {
-  background-color:#FFFF00;
+  background-color:#FFFF66;
 }
 
 .response-load {
   text-align:right;
-  background-color: #FFFF00;
+  background-color: #FFFF66;
 }
 
 .safe-load {
