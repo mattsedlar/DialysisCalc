@@ -16,7 +16,7 @@ h1, h2 {
     font-weight: bold;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: 'Varela Round', sans-serif;
   color: #492c7c;
 }
@@ -79,6 +79,10 @@ select.form-control, .btn {
     font-size:2em;
 }
 
+.response-load .loads_value {
+    background-color: #eee;
+}
+
 
 @media screen and (max-width: 767px) {
   form {
@@ -90,8 +94,11 @@ select.form-control, .btn {
   p {
     font-size: 1.5em;
   }
+  .response-load {
+    text-align:left;
+  }
   .safe-load {
     text-align: right;
-  }  
+  }
 
 }
