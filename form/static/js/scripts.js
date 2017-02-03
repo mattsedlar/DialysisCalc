@@ -128,7 +128,7 @@ let fresenius = ["Alhambra", "Anaheim",
 
 $(document).ready(function(){
   // Steps
-  $(document).on("click","#btnStep0,#btnStep1, #btnStep3, #btnStep4",function(){
+  $(document).on("click touchstart","#btnStep0,#btnStep1, #btnStep3, #btnStep4",function(){
     if ($(this).attr('id') == 'btnStep0') {
         if( $('#id_position').val() == "Choose Your Job" | $('#id_facility').val() == "Choose Your Employer") {
             alert("Please fill out the required fields");
@@ -147,7 +147,7 @@ $(document).ready(function(){
   });
   // Prevent Zero Values for Shifts
   $(document).on("click", "#id_all_shifts, #id_opening, #id_mid, #id_breaks, #id_sick, #id_closing", function() {
-    $(this).val('');
+    $(this).select();
     $(this).css('color','#000');
   });
   // Social Worker Exception

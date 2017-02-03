@@ -38,6 +38,11 @@ select.form-control, .btn {
   font-family: 'Varela Round', sans-serif;
 }
 
+/* BUTTONS */
+
+#btnStep0,#btnStep1, #btnStep3, #btnStep4 {
+  cursor:pointer;
+}
 
 /* SEGMENTATION */
 
@@ -59,7 +64,7 @@ select.form-control, .btn {
 
 .safe-load {
   text-align:left;
-  background-color: #FFFF66;  
+  background-color: #FFFF66;
 }
 
 #safe-load {
