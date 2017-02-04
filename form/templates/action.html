@@ -129,19 +129,19 @@
         {% csrf_token %}
                  <input type="hidden" id="id_rid" name="rid" value="{{query.id}}" />
                  <div class="form-group row text-left">
-                    <label for="id_name" class="col-sm-2 col-form-label">Name</label>
+                    <label for="id_name" class="col-sm-2 col-form-label">Name *</label>
                     <div class="col-sm-4">
                        <input id="id_name" maxlength="100" name="name" type="text" class="form-control input-lg" required="">
                      </div>
-                     <label for="id_email" class="col-sm-2 col-form-label">Email</label>
+                     <label for="id_email" class="col-sm-2 col-form-label">Email *</label>
                       <div class="col-sm-4">
                        <input id="id_email" maxlength="100" name="email" type="email" class="form-control input-lg" required="">
                       </div>
                   </div>
                   <div class="form-group row text-left">
-                    <label for="id_phone_number" class="col-sm-2 col-form-label">Phone</label>
+                    <label for="id_phone_number" class="col-sm-2 col-form-label">Phone *</label>
                     <div class="col-sm-4">
-                       <input id="id_phone_number" maxlength="100" name="phone_number" type="text" class="form-control input-lg" placeholder="999-999-9999">
+                       <input id="id_phone_number" maxlength="100" name="phone_number" type="text" class="form-control input-lg" placeholder="999-999-9999" required="">
                      </div>
                      <label for="id_zipcode" class="col-sm-2 col-form-label">Zip</label>
                       <div class="col-sm-4">
@@ -152,6 +152,7 @@
 
         </form>
         <br/><br/>
+        <p class="text-left" style="font-size: 12px">* Required</p>
         <p class="text-left" style="font-size:12px">By providing my phone  number,  I understand  that SEIU and its locals and affiliates may use automated  calling technologies  and/or text message me on my cellular phone  on a periodic basis. SEIU will never charge for text message alerts. Carrier message and data rates may apply to such alerts. Text STOP to 787753 to stop receiving messages. Text HELP to 787753 for more information. </p>
 
     </div>
